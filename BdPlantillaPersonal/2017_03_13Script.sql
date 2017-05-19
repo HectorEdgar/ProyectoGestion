@@ -9,6 +9,11 @@ Version
 Database		MS SQL 7 
 */
 
+USE Pivote;
+DROP DATABASE SistemaPlantillaPersonal;
+CREATE DATABASE SistemaPlantillaPersonal;
+USE SistemaPlantillaPersonal;
+
 
 Drop table [PlantillaHistorial] 
 go
@@ -70,7 +75,7 @@ go
 
 Create table [RelacionLaboral] (
 	[idRelacionLaboral] Integer Identity NOT NULL,
-	[relacionLaboral] Varchar(100) Identity NOT NULL,
+	[relacionLaboral] Varchar(100) NOT NULL,
 	[NMCATG] Varchar(100) NOT NULL,
 	[TBDES] Varchar(100) NOT NULL,
 Primary Key  ([idRelacionLaboral])
