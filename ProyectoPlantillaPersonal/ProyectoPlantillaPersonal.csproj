@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15DDC0B7-75BF-4CEE-8D44-C69498FA7B7F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyectoPlantillaPersonal</RootNamespace>
+    <AssemblyName>ProyectoPlantillaPersonal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controladores\ControladorPlantillaPersonal.cs" />
+    <Compile Include="Controladores\ControladorReportes.cs" />
+    <Compile Include="Controladores\Excel.cs" />
+    <Compile Include="Eventos\EventoProgressBar.cs" />
+    <Compile Include="Formularios\Administrador\AdministradorBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administrador\AdministradorBuscar.Designer.cs">
+      <DependentUpon>AdministradorBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Administrador\AdministradorCargarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administrador\AdministradorCargarDatos.Designer.cs">
+      <DependentUpon>AdministradorCargarDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Administrador\CuentaAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administrador\CuentaAgregar.Designer.cs">
+      <DependentUpon>CuentaAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Administrador\GenerarReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administrador\GenerarReportes.designer.cs">
+      <DependentUpon>GenerarReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Administrador\VistasReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administrador\VistasReportes.designer.cs">
+      <DependentUpon>VistasReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestor\GenerarReportes_Gestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestor\GenerarReportes_Gestor.designer.cs">
+      <DependentUpon>GenerarReportes_Gestor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestor\GestorBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestor\GestorBuscar.Designer.cs">
+      <DependentUpon>GestorBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestor\GestorCargarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestor\GestorCargarDatos.Designer.cs">
+      <DependentUpon>GestorCargarDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestor\VistasReportes_Gestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestor\VistasReportes_Gestor.designer.cs">
+      <DependentUpon>VistasReportes_Gestor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Loggin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Loggin.Designer.cs">
+      <DependentUpon>Loggin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Administrador\MenuPrincipalAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administrador\MenuPrincipalAdministrador.Designer.cs">
+      <DependentUpon>MenuPrincipalAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestor\MenuPrincipalGestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestor\MenuPrincipalGestor.Designer.cs">
+      <DependentUpon>MenuPrincipalGestor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Visor\MenuPrincipalVisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Visor\MenuPrincipalVisor.Designer.cs">
+      <DependentUpon>MenuPrincipalVisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Visor\VistasReportes_Visor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Visor\VistasReportes_Visor.designer.cs">
+      <DependentUpon>VistasReportes_Visor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ClavePresupuestal.cs">
+      <DependentUpon>ModeloPlantillaPersonal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Cuenta.cs">
+      <DependentUpon>ModeloPlantillaPersonal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloClavePresupuestal.cs" />
+    <Compile Include="Modelos\ModeloCuenta.cs" />
+    <Compile Include="Modelos\ModeloPlantilla.cs" />
+    <Compile Include="Modelos\ModeloPlantillaHistorial.cs" />
+    <Compile Include="Modelos\ModeloPlantillaPersonal.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloPlantillaPersonal.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloPlantillaPersonal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloPlantillaPersonal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloPlantillaPersonal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloPlantillaPersonal.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloRelacionLaboral.cs" />
+    <Compile Include="Modelos\ModeloSector.cs" />
+    <Compile Include="Modelos\ModeloStatus.cs" />
+    <Compile Include="Modelos\Plantilla.cs">
+      <DependentUpon>ModeloPlantillaPersonal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\PlantillaHistorial.cs">
+      <DependentUpon>ModeloPlantillaPersonal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\RelacionLaboral.cs">
+      <DependentUpon>ModeloPlantillaPersonal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Sector.cs">
+      <DependentUpon>ModeloPlantillaPersonal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Status.cs">
+      <DependentUpon>ModeloPlantillaPersonal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Administrador\AdministradorBuscar.resx">
+      <DependentUpon>AdministradorBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Administrador\AdministradorCargarDatos.resx">
+      <DependentUpon>AdministradorCargarDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Administrador\CuentaAgregar.resx">
+      <DependentUpon>CuentaAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Administrador\GenerarReportes.resx">
+      <DependentUpon>GenerarReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Administrador\VistasReportes.resx">
+      <DependentUpon>VistasReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestor\GenerarReportes_Gestor.resx">
+      <DependentUpon>GenerarReportes_Gestor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestor\GestorBuscar.resx">
+      <DependentUpon>GestorBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestor\GestorCargarDatos.resx">
+      <DependentUpon>GestorCargarDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestor\VistasReportes_Gestor.resx">
+      <DependentUpon>VistasReportes_Gestor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Loggin.resx">
+      <DependentUpon>Loggin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Administrador\MenuPrincipalAdministrador.resx">
+      <DependentUpon>MenuPrincipalAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestor\MenuPrincipalGestor.resx">
+      <DependentUpon>MenuPrincipalGestor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Visor\MenuPrincipalVisor.resx">
+      <DependentUpon>MenuPrincipalVisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Visor\VistasReportes_Visor.resx">
+      <DependentUpon>VistasReportes_Visor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Modelos\ModeloPlantillaPersonal.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloPlantillaPersonal.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelos\ModeloPlantillaPersonal.edmx.diagram">
+      <DependentUpon>ModeloPlantillaPersonal.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modelos\ModeloPlantillaPersonal.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloPlantillaPersonal.Context.cs</LastGenOutput>
+      <DependentUpon>ModeloPlantillaPersonal.edmx</DependentUpon>
+    </Content>
+    <Content Include="Modelos\ModeloPlantillaPersonal.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloPlantillaPersonal.edmx</DependentUpon>
+      <LastGenOutput>ModeloPlantillaPersonal.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

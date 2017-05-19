@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SistemaPlantillaPersonalModelStoreContainer" CdmEntityContainer="SistemaPlantillaPersonalEntities">
+    <EntitySetMapping Name="ClavePresupuestal">
+      <EntityTypeMapping TypeName="SistemaPlantillaPersonalModel.ClavePresupuestal">
+        <MappingFragment StoreEntitySet="ClavePresupuestal">
+          <ScalarProperty Name="clavePresupuestal1" ColumnName="clavePresupuestal" />
+          <ScalarProperty Name="idClavePresupuestal" ColumnName="idClavePresupuestal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cuenta">
+      <EntityTypeMapping TypeName="SistemaPlantillaPersonalModel.Cuenta">
+        <MappingFragment StoreEntitySet="Cuenta">
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="idCuenta" ColumnName="idCuenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plantilla">
+      <EntityTypeMapping TypeName="SistemaPlantillaPersonalModel.Plantilla">
+        <MappingFragment StoreEntitySet="Plantilla">
+          <ScalarProperty Name="idRelacionLaboral" ColumnName="idRelacionLaboral" />
+          <ScalarProperty Name="idStatus" ColumnName="idStatus" />
+          <ScalarProperty Name="idClavePresupuestal" ColumnName="idClavePresupuestal" />
+          <ScalarProperty Name="idSector" ColumnName="idSector" />
+          <ScalarProperty Name="NQS" ColumnName="NQS" />
+          <ScalarProperty Name="CVEDEP" ColumnName="CVEDEP" />
+          <ScalarProperty Name="CTICCVE" ColumnName="CTICCVE" />
+          <ScalarProperty Name="CNOMTIP" ColumnName="CNOMTIP" />
+          <ScalarProperty Name="CNOMCVE" ColumnName="CNOMCVE" />
+          <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+          <ScalarProperty Name="NMFING" ColumnName="NMFING" />
+          <ScalarProperty Name="NMNOM" ColumnName="NMNOM" />
+          <ScalarProperty Name="NMNOMB" ColumnName="NMNOMB" />
+          <ScalarProperty Name="NMAPM" ColumnName="NMAPM" />
+          <ScalarProperty Name="NMAPP" ColumnName="NMAPP" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="PBPNUE" ColumnName="PBPNUE" />
+          <ScalarProperty Name="idPlantilla" ColumnName="idPlantilla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlantillaHistorial">
+      <EntityTypeMapping TypeName="SistemaPlantillaPersonalModel.PlantillaHistorial">
+        <MappingFragment StoreEntitySet="PlantillaHistorial">
+          <ScalarProperty Name="NQS" ColumnName="NQS" />
+          <ScalarProperty Name="CVEDEP" ColumnName="CVEDEP" />
+          <ScalarProperty Name="CTICCVE" ColumnName="CTICCVE" />
+          <ScalarProperty Name="CNOMTIP" ColumnName="CNOMTIP" />
+          <ScalarProperty Name="CNOMCVE" ColumnName="CNOMCVE" />
+          <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+          <ScalarProperty Name="NMFSAL" ColumnName="NMFSAL" />
+          <ScalarProperty Name="NMFING" ColumnName="NMFING" />
+          <ScalarProperty Name="NMNOM" ColumnName="NMNOM" />
+          <ScalarProperty Name="NMNOMB" ColumnName="NMNOMB" />
+          <ScalarProperty Name="NMAPM" ColumnName="NMAPM" />
+          <ScalarProperty Name="NMAPP" ColumnName="NMAPP" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="PBPNUP" ColumnName="PBPNUP" />
+          <ScalarProperty Name="PBPNUE" ColumnName="PBPNUE" />
+          <ScalarProperty Name="clavePresupuestalAnterior" ColumnName="clavePresupuestalAnterior" />
+          <ScalarProperty Name="idClavePresupuestal" ColumnName="idClavePresupuestal" />
+          <ScalarProperty Name="idSector" ColumnName="idSector" />
+          <ScalarProperty Name="idStatus" ColumnName="idStatus" />
+          <ScalarProperty Name="idRelacionLaboral" ColumnName="idRelacionLaboral" />
+          <ScalarProperty Name="idPlantilla" ColumnName="idPlantilla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelacionLaboral">
+      <EntityTypeMapping TypeName="SistemaPlantillaPersonalModel.RelacionLaboral">
+        <MappingFragment StoreEntitySet="RelacionLaboral">
+          <ScalarProperty Name="TBDES" ColumnName="TBDES" />
+          <ScalarProperty Name="NMCATG" ColumnName="NMCATG" />
+          <ScalarProperty Name="relacionLaboral1" ColumnName="relacionLaboral" />
+          <ScalarProperty Name="idRelacionLaboral" ColumnName="idRelacionLaboral" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sector">
+      <EntityTypeMapping TypeName="SistemaPlantillaPersonalModel.Sector">
+        <MappingFragment StoreEntitySet="Sector">
+          <ScalarProperty Name="sector1" ColumnName="sector" />
+          <ScalarProperty Name="idSector" ColumnName="idSector" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="SistemaPlantillaPersonalModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="nombreStatus" ColumnName="nombreStatus" />
+          <ScalarProperty Name="idStatus" ColumnName="idStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

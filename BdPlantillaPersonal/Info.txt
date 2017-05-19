@@ -1,0 +1,44 @@
+nup - PBPNUP
+nuevo nup - PBPNUE
+
+ID BD - Opcional
+RFC
+ApPat - NMAPP
+ApMat - NMAPM
+Nombre - NMNOMB
+NombreCompleto - NMNOM
+Fecha de ingreso - NMFING
+NIVEL
+
+CNOMCVE
+CNOMTIP
+CTICCVE
+CVEDEP
+NQS
+
+STATUS - FK
+
+RELACIÓN LABORAL - FK
+Clave de puesto - NMCATG FK
+Descripción de puesto - TBDES FK
+
+SECTOR - FK
+
+Clave presupuestal - NMDEPS - FK
+
+
+
+Catálogos adicionales
+- Status
+- Relación laboral: Se relaciona con clave de puesto y descripción del puesto.
+- Sector
+- Clave presupuestal
+
+
+AOTA960829HOCLVN07
+
++++++++++++++++
++-------------+
++-+-+++++++-+-+
++-+---------+-+
++-+++++-+++++-+

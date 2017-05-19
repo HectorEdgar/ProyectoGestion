@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SistemaPlantillaPersonalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ClavePresupuestal">
+    <Key>
+      <PropertyRef Name="idClavePresupuestal" />
+    </Key>
+    <Property Name="idClavePresupuestal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clavePresupuestal" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cuenta">
+    <Key>
+      <PropertyRef Name="idCuenta" />
+    </Key>
+    <Property Name="idCuenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="contrasenia" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tipo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Plantilla">
+    <Key>
+      <PropertyRef Name="idPlantilla" />
+    </Key>
+    <Property Name="idPlantilla" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PBPNUE" Type="int" Nullable="false" />
+    <Property Name="RFC" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NMAPP" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NMAPM" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NMNOMB" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="NMNOM" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="NMFING" Type="datetime" Nullable="false" />
+    <Property Name="NIVEL" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CNOMCVE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CNOMTIP" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CTICCVE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CVEDEP" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NQS" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="idSector" Type="int" Nullable="false" />
+    <Property Name="idClavePresupuestal" Type="int" Nullable="false" />
+    <Property Name="idStatus" Type="int" Nullable="false" />
+    <Property Name="idRelacionLaboral" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlantillaHistorial">
+    <Key>
+      <PropertyRef Name="idPlantilla" />
+    </Key>
+    <Property Name="idPlantilla" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idRelacionLaboral" Type="int" Nullable="false" />
+    <Property Name="idStatus" Type="int" Nullable="false" />
+    <Property Name="idSector" Type="int" Nullable="false" />
+    <Property Name="idClavePresupuestal" Type="int" />
+    <Property Name="clavePresupuestalAnterior" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PBPNUE" Type="int" Nullable="false" />
+    <Property Name="PBPNUP" Type="int" />
+    <Property Name="RFC" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NMAPP" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NMAPM" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NMNOMB" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="NMNOM" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="NMFING" Type="datetime" Nullable="false" />
+    <Property Name="NMFSAL" Type="datetime" Nullable="false" />
+    <Property Name="NIVEL" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CNOMCVE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CNOMTIP" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CTICCVE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CVEDEP" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NQS" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RelacionLaboral">
+    <Key>
+      <PropertyRef Name="idRelacionLaboral" />
+    </Key>
+    <Property Name="idRelacionLaboral" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="relacionLaboral" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NMCATG" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TBDES" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sector">
+    <Key>
+      <PropertyRef Name="idSector" />
+    </Key>
+    <Property Name="idSector" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sector" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="idStatus" />
+    </Key>
+    <Property Name="idStatus" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreStatus" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Plantilla__idCla__6C190EBB">
+    <End Role="ClavePresupuestal" Type="Self.ClavePresupuestal" Multiplicity="1" />
+    <End Role="Plantilla" Type="Self.Plantilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClavePresupuestal">
+        <PropertyRef Name="idClavePresupuestal" />
+      </Principal>
+      <Dependent Role="Plantilla">
+        <PropertyRef Name="idClavePresupuestal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Plantilla__idCla__6D0D32F4">
+    <End Role="ClavePresupuestal" Type="Self.ClavePresupuestal" Multiplicity="0..1" />
+    <End Role="PlantillaHistorial" Type="Self.PlantillaHistorial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClavePresupuestal">
+        <PropertyRef Name="idClavePresupuestal" />
+      </Principal>
+      <Dependent Role="PlantillaHistorial">
+        <PropertyRef Name="idClavePresupuestal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Plantilla__idRel__68487DD7">
+    <End Role="RelacionLaboral" Type="Self.RelacionLaboral" Multiplicity="1" />
+    <End Role="Plantilla" Type="Self.Plantilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RelacionLaboral">
+        <PropertyRef Name="idRelacionLaboral" />
+      </Principal>
+      <Dependent Role="Plantilla">
+        <PropertyRef Name="idRelacionLaboral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Plantilla__idRel__693CA210">
+    <End Role="RelacionLaboral" Type="Self.RelacionLaboral" Multiplicity="1" />
+    <End Role="PlantillaHistorial" Type="Self.PlantillaHistorial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RelacionLaboral">
+        <PropertyRef Name="idRelacionLaboral" />
+      </Principal>
+      <Dependent Role="PlantillaHistorial">
+        <PropertyRef Name="idRelacionLaboral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Plantilla__idSec__6A30C649">
+    <End Role="Sector" Type="Self.Sector" Multiplicity="1" />
+    <End Role="Plantilla" Type="Self.Plantilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sector">
+        <PropertyRef Name="idSector" />
+      </Principal>
+      <Dependent Role="Plantilla">
+        <PropertyRef Name="idSector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Plantilla__idSec__6B24EA82">
+    <End Role="Sector" Type="Self.Sector" Multiplicity="1" />
+    <End Role="PlantillaHistorial" Type="Self.PlantillaHistorial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sector">
+        <PropertyRef Name="idSector" />
+      </Principal>
+      <Dependent Role="PlantillaHistorial">
+        <PropertyRef Name="idSector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Plantilla__idSta__66603565">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="Plantilla" Type="Self.Plantilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="idStatus" />
+      </Principal>
+      <Dependent Role="Plantilla">
+        <PropertyRef Name="idStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Plantilla__idSta__6754599E">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="PlantillaHistorial" Type="Self.PlantillaHistorial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="idStatus" />
+      </Principal>
+      <Dependent Role="PlantillaHistorial">
+        <PropertyRef Name="idStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SistemaPlantillaPersonalModelStoreContainer">
+    <EntitySet Name="ClavePresupuestal" EntityType="Self.ClavePresupuestal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cuenta" EntityType="Self.Cuenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Plantilla" EntityType="Self.Plantilla" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlantillaHistorial" EntityType="Self.PlantillaHistorial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RelacionLaboral" EntityType="Self.RelacionLaboral" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sector" EntityType="Self.Sector" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Plantilla__idCla__6C190EBB" Association="Self.FK__Plantilla__idCla__6C190EBB">
+      <End Role="ClavePresupuestal" EntitySet="ClavePresupuestal" />
+      <End Role="Plantilla" EntitySet="Plantilla" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Plantilla__idCla__6D0D32F4" Association="Self.FK__Plantilla__idCla__6D0D32F4">
+      <End Role="ClavePresupuestal" EntitySet="ClavePresupuestal" />
+      <End Role="PlantillaHistorial" EntitySet="PlantillaHistorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Plantilla__idRel__68487DD7" Association="Self.FK__Plantilla__idRel__68487DD7">
+      <End Role="RelacionLaboral" EntitySet="RelacionLaboral" />
+      <End Role="Plantilla" EntitySet="Plantilla" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Plantilla__idRel__693CA210" Association="Self.FK__Plantilla__idRel__693CA210">
+      <End Role="RelacionLaboral" EntitySet="RelacionLaboral" />
+      <End Role="PlantillaHistorial" EntitySet="PlantillaHistorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Plantilla__idSec__6A30C649" Association="Self.FK__Plantilla__idSec__6A30C649">
+      <End Role="Sector" EntitySet="Sector" />
+      <End Role="Plantilla" EntitySet="Plantilla" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Plantilla__idSec__6B24EA82" Association="Self.FK__Plantilla__idSec__6B24EA82">
+      <End Role="Sector" EntitySet="Sector" />
+      <End Role="PlantillaHistorial" EntitySet="PlantillaHistorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Plantilla__idSta__66603565" Association="Self.FK__Plantilla__idSta__66603565">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Plantilla" EntitySet="Plantilla" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Plantilla__idSta__6754599E" Association="Self.FK__Plantilla__idSta__6754599E">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="PlantillaHistorial" EntitySet="PlantillaHistorial" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
