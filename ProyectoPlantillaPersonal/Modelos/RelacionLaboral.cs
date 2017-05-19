@@ -27,5 +27,10 @@ namespace ProyectoPlantillaPersonal.Modelos
     
         public virtual ICollection<Plantilla> Plantilla { get; set; }
         public virtual ICollection<PlantillaHistorial> PlantillaHistorial { get; set; }
+
+        public override string ToString()
+        {
+            return relacionLaboral1 + "(NMCATG: " + NMCATG + " | TBDES: " + TBDES +")";
+        }
     }
 }
