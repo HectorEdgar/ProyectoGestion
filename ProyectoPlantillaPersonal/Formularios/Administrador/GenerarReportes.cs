@@ -242,7 +242,14 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
             if (MessageBox.Show("¿Son correctos los datos mostrados en la\ntabla para generar el reporte?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 ControladorReportes controladorReportes = new ControladorReportes();
-                controladorReportes.generarReporte(isPlantilla ? listaPlantilla : listaPlantillaHistorial);
+                if (isPlantilla)
+                {
+                    controladorReportes.generarReporte(listaPlantilla);
+                }
+                else
+                {
+                    controladorReportes.generarReporte(listaPlantillaHistorial);
+                }
             }
         }
     }
