@@ -138,7 +138,7 @@
             // 
             // cmdGenerarVista
             // 
-            this.cmdGenerarVista.Location = new System.Drawing.Point(486, 3);
+            this.cmdGenerarVista.Location = new System.Drawing.Point(486, 38);
             this.cmdGenerarVista.Name = "cmdGenerarVista";
             this.cmdGenerarVista.Size = new System.Drawing.Size(103, 23);
             this.cmdGenerarVista.TabIndex = 8;
@@ -202,6 +202,7 @@
             // radioHasta
             // 
             this.radioHasta.AutoSize = true;
+            this.radioHasta.Checked = true;
             this.radioHasta.Location = new System.Drawing.Point(313, 54);
             this.radioHasta.Name = "radioHasta";
             this.radioHasta.Size = new System.Drawing.Size(62, 17);
@@ -217,7 +218,6 @@
             this.radioDesde.Name = "radioDesde";
             this.radioDesde.Size = new System.Drawing.Size(65, 17);
             this.radioDesde.TabIndex = 16;
-            this.radioDesde.TabStop = true;
             this.radioDesde.Text = "Desde...";
             this.radioDesde.UseVisualStyleBackColor = true;
             // 

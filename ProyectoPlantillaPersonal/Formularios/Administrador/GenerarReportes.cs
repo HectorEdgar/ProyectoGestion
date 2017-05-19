@@ -17,6 +17,11 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         private ModeloPlantilla modeloPlantilla;
         private ModeloPlantillaHistorial modeloPlantillaHistorial;
 
+        private List<Plantilla> listaPlantilla = new List<Plantilla>();
+        private List<PlantillaHistorial> listaPlantillaHistorial = new List<PlantillaHistorial>();
+
+        private bool isPlantilla = true;
+
         public GenerarReportes()
         {
             InitializeComponent();
@@ -26,82 +31,7 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
 
         private void cmdReporte_Click(object sender, EventArgs e)
         {
-            List<Plantilla> listaPlantilla = new List<Plantilla>();
-            List<PlantillaHistorial> listaPlantillaHistorial = new List<PlantillaHistorial>();
 
-            if (comboPlantilla.SelectedIndex == 0)
-            {
-                listaPlantilla =
-                modeloPlantilla.seleccionarPorPropiedad(
-                    txtNup.Text, txtNup.Text != "" ? true : false,
-                    txtRfc.Text, txtRfc.Text != "" ? true : false,
-                    txtCp.Text, txtCp.Text != "" ? true : false
-                );
-
-                Func<Plantilla, bool> funcSeleccionAno = p => {
-                    if (radioDesde.Checked)
-                    {
-                        if (p.NMFING.Year >= nudAno.Value)
-                        {
-                            return true;
-                        }
-                    }
-
-                    if (radioHasta.Checked)
-                    {
-                        if (p.NMFING.Year <= nudAno.Value)
-                        {
-                            return true;
-                        }
-                    }
-
-                    return false;
-                };
-
-                listaPlantilla = listaPlantilla.Where(funcSeleccionAno).ToList();
-                configurarDGVVistaP(listaPlantilla);
-            }
-            else if (comboPlantilla.SelectedIndex == 1)
-            {
-                listaPlantillaHistorial =
-                modeloPlantillaHistorial.seleccionarPorPropiedad(
-                    txtNup.Text, txtNup.Text != "" ? true : false,
-                    txtNup.Text, txtNup.Text != "" ? true : false,
-                    txtRfc.Text, txtRfc.Text != "" ? true : false,
-                    txtCp.Text, txtCp.Text != "" ? true : false
-                );
-
-                Func<PlantillaHistorial, bool> funcSeleccionAno = ph => {
-                    if (radioDesde.Checked)
-                    {
-                        if (ph.NMFING.Year >= nudAno.Value)
-                        {
-                            return true;
-                        }
-                    }
-
-                    if (radioHasta.Checked)
-                    {
-                        if (ph.NMFING.Year <= nudAno.Value)
-                        {
-                            return true;
-                        }
-                    }
-
-                    return false;
-                };
-
-                listaPlantillaHistorial = listaPlantillaHistorial.Where(funcSeleccionAno).ToList();
-                configurarDGVVistaPH(listaPlantillaHistorial);
-            }
-
-            if (MessageBox.Show("¿Son correctos los datos mostrados en la\ntabla para generar el reporte?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                MessageBox.Show("Entramos!");
-                ControladorReportes controladorReportes = new ControladorReportes();
-                controladorReportes.generarReporte(listaPlantilla);
-                
-            }
         }
 
         private void configurarDGVVistaP(List<Plantilla> listaPlantilla)
@@ -154,6 +84,8 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         {
             nudAno.Maximum = DateTime.Today.Year;
             nudAno.Value = DateTime.Today.Year;
+
+            comboPlantilla.SelectedIndex = 0;
         }
 
         private void cerrarSesiónToolStripMenuItem1_Click_1(object sender, EventArgs e)
@@ -227,6 +159,98 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         private void generarVistasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             abrirVistasReportes();
+        }
+
+        private void cmdVista_Click(object sender, EventArgs e)
+        {
+            listaPlantilla = new List<Plantilla>();
+            listaPlantillaHistorial = new List<PlantillaHistorial>();
+
+            if (comboPlantilla.SelectedIndex == 0)
+            {
+                listaPlantilla =
+                modeloPlantilla.seleccionarPorPropiedad(
+                    txtNup.Text, txtNup.Text != "" ? true : false,
+                    txtRfc.Text, txtRfc.Text != "" ? true : false,
+                    txtCp.Text, txtCp.Text != "" ? true : false
+                );
+
+                Func<Plantilla, bool> funcSeleccionAno = p => {
+                    if (radioDesde.Checked)
+                    {
+                        if (p.NMFING.Year >= nudAno.Value)
+                        {
+                            return true;
+                        }
+                    }
+
+                    if (radioHasta.Checked)
+                    {
+                        if (p.NMFING.Year <= nudAno.Value)
+                        {
+                            return true;
+                        }
+                    }
+
+                    return false;
+                };
+
+                listaPlantilla = listaPlantilla.Where(funcSeleccionAno).ToList();
+                configurarDGVVistaP(listaPlantilla);
+
+                isPlantilla = false;
+            }
+            else if (comboPlantilla.SelectedIndex == 1)
+            {
+                listaPlantillaHistorial =
+                modeloPlantillaHistorial.seleccionarPorPropiedad(
+                    txtNup.Text, txtNup.Text != "" ? true : false,
+                    txtNup.Text, txtNup.Text != "" ? true : false,
+                    txtRfc.Text, txtRfc.Text != "" ? true : false,
+                    txtCp.Text, txtCp.Text != "" ? true : false
+                );
+
+                Func<PlantillaHistorial, bool> funcSeleccionAno = ph => {
+                    if (radioDesde.Checked)
+                    {
+                        if (ph.NMFING.Year >= nudAno.Value)
+                        {
+                            return true;
+                        }
+                    }
+
+                    if (radioHasta.Checked)
+                    {
+                        if (ph.NMFING.Year <= nudAno.Value)
+                        {
+                            return true;
+                        }
+                    }
+
+                    return false;
+                };
+
+                listaPlantillaHistorial = listaPlantillaHistorial.Where(funcSeleccionAno).ToList();
+                configurarDGVVistaPH(listaPlantillaHistorial);
+
+                isPlantilla = false;
+            }
+        }
+
+        private void cmdReporte_Click_2(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Son correctos los datos mostrados en la\ntabla para generar el reporte?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ControladorReportes controladorReportes = new ControladorReportes();
+                if (isPlantilla)
+                {
+                    controladorReportes.generarReporte(listaPlantilla);
+                }
+                else
+                {
+                    controladorReportes.generarReporte(listaPlantillaHistorial);
+                }
+            }
         }
     }
 }

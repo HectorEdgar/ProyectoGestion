@@ -25,7 +25,12 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         }
 
         private void VistasReportes_Load(object sender, EventArgs e)
-        { }
+        {
+            nudAno.Maximum = DateTime.Today.Year;
+            nudAno.Value = DateTime.Today.Year;
+
+            comboPlantilla.SelectedIndex = 0;
+        }
 
         private void cmdGenerarVista_Click(object sender, EventArgs e)
         {
@@ -163,6 +168,11 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
             VistasReportes_Visor form = new VistasReportes_Visor();
             form.Show();
             this.Dispose();
+        }
+
+        private void comboPlantilla_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
