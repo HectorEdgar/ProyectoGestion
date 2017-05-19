@@ -18,6 +18,11 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         private ModeloPlantilla modeloPlantilla;
         private ModeloPlantillaHistorial modeloPlantillaHistorial;
 
+        private List<Plantilla> listaPlantilla = new List<Plantilla>();
+        private List<PlantillaHistorial> listaPlantillaHistorial = new List<PlantillaHistorial>();
+
+        private bool isPlantilla = true;
+
         public GenerarReportes_Gestor()
         {
             InitializeComponent();
@@ -27,8 +32,8 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
 
         private void cmdReporte_Click(object sender, EventArgs e)
         {
-            List<Plantilla> listaPlantilla = new List<Plantilla>();
-            List<PlantillaHistorial> listaPlantillaHistorial = new List<PlantillaHistorial>();
+            listaPlantilla = new List<Plantilla>();
+            listaPlantillaHistorial = new List<PlantillaHistorial>();
 
             if (comboPlantilla.SelectedIndex == 0)
             {
@@ -203,7 +208,14 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
             if (MessageBox.Show("¿Son correctos los datos mostrados en la\ntabla para generar el reporte?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 ControladorReportes controladorReportes = new ControladorReportes();
-                controladorReportes.generarReporte(listaPlantilla);
+                if (isPlantilla)
+                {
+                    controladorReportes.generarReporte(listaPlantilla);
+                }
+                else
+                {
+                    controladorReportes.generarReporte(listaPlantillaHistorial);
+                }
             }
         }
     }
