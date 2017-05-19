@@ -95,12 +95,6 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
                 listaPlantillaHistorial = listaPlantillaHistorial.Where(funcSeleccionAno).ToList();
                 configurarDGVVistaPH(listaPlantillaHistorial);
             }
-
-            if (MessageBox.Show("¿Son correctos los datos mostrados en la\ntabla para generar el reporte?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                ControladorReportes controladorReportes = new ControladorReportes();
-                controladorReportes.generarReporte(listaPlantilla);
-            }
         }
 
         private void configurarDGVVistaP(List<Plantilla> listaPlantilla)
@@ -151,6 +145,8 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         {
             nudAno.Maximum = DateTime.Today.Year;
             nudAno.Value = DateTime.Today.Year;
+
+            comboPlantilla.SelectedIndex = 0;
         }
         public void abrirGestorCargarDatos()
         {
@@ -200,6 +196,15 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         private void cerrarSesiónToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             cerrarSesion();
+        }
+
+        private void cmdReporte_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Son correctos los datos mostrados en la\ntabla para generar el reporte?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ControladorReportes controladorReportes = new ControladorReportes();
+                controladorReportes.generarReporte(listaPlantilla);
+            }
         }
     }
 }

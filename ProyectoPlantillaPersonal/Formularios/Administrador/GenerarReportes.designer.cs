@@ -34,6 +34,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmdReporte = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.nudAno = new System.Windows.Forms.NumericUpDown();
             this.radioHasta = new System.Windows.Forms.RadioButton();
@@ -64,7 +65,6 @@
             this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmdReporte = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -140,6 +140,16 @@
             this.panel2.Size = new System.Drawing.Size(603, 378);
             this.panel2.TabIndex = 14;
             // 
+            // cmdReporte
+            // 
+            this.cmdReporte.Location = new System.Drawing.Point(486, 53);
+            this.cmdReporte.Name = "cmdReporte";
+            this.cmdReporte.Size = new System.Drawing.Size(103, 23);
+            this.cmdReporte.TabIndex = 15;
+            this.cmdReporte.Text = "Generar reporte";
+            this.cmdReporte.UseVisualStyleBackColor = true;
+            this.cmdReporte.Click += new System.EventHandler(this.cmdReporte_Click_2);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -213,7 +223,7 @@
             this.cmdVista.TabIndex = 9;
             this.cmdVista.Text = "Generar vista";
             this.cmdVista.UseVisualStyleBackColor = true;
-            this.cmdVista.Click += new System.EventHandler(this.cmdReporte_Click);
+            this.cmdVista.Click += new System.EventHandler(this.cmdVista_Click);
             // 
             // label1
             // 
@@ -408,16 +418,6 @@
             this.cerrarSesiónToolStripMenuItem1.Size = new System.Drawing.Size(151, 22);
             this.cerrarSesiónToolStripMenuItem1.Text = "Cerrar sesión...";
             this.cerrarSesiónToolStripMenuItem1.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem1_Click_1);
-            // 
-            // cmdReporte
-            // 
-            this.cmdReporte.Location = new System.Drawing.Point(486, 53);
-            this.cmdReporte.Name = "cmdReporte";
-            this.cmdReporte.Size = new System.Drawing.Size(103, 23);
-            this.cmdReporte.TabIndex = 15;
-            this.cmdReporte.Text = "Generar reporte";
-            this.cmdReporte.UseVisualStyleBackColor = true;
-            this.cmdReporte.Click += new System.EventHandler(this.cmdReporte_Click_1);
             // 
             // GenerarReportes
             // 
