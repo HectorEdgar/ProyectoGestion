@@ -25,7 +25,9 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         }
 
         private void VistasReportes_Load(object sender, EventArgs e)
-        { }
+        {
+            comboPlantilla.SelectedIndex = 0;
+        }
 
         private void cmdGenerarVista_Click(object sender, EventArgs e)
         {
