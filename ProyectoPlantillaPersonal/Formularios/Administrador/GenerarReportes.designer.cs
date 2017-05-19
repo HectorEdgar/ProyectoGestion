@@ -39,7 +39,7 @@
             this.radioHasta = new System.Windows.Forms.RadioButton();
             this.radioDesde = new System.Windows.Forms.RadioButton();
             this.comboPlantilla = new System.Windows.Forms.ComboBox();
-            this.cmdReporte = new System.Windows.Forms.Button();
+            this.cmdVista = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvVista = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@
             this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmdReporte = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -119,12 +120,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.panel2.Controls.Add(this.cmdReporte);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.nudAno);
             this.panel2.Controls.Add(this.radioHasta);
             this.panel2.Controls.Add(this.radioDesde);
             this.panel2.Controls.Add(this.comboPlantilla);
-            this.panel2.Controls.Add(this.cmdReporte);
+            this.panel2.Controls.Add(this.cmdVista);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dgvVista);
             this.panel2.Controls.Add(this.label2);
@@ -172,6 +174,7 @@
             // radioHasta
             // 
             this.radioHasta.AutoSize = true;
+            this.radioHasta.Checked = true;
             this.radioHasta.Location = new System.Drawing.Point(313, 54);
             this.radioHasta.Name = "radioHasta";
             this.radioHasta.Size = new System.Drawing.Size(62, 17);
@@ -187,7 +190,6 @@
             this.radioDesde.Name = "radioDesde";
             this.radioDesde.Size = new System.Drawing.Size(65, 17);
             this.radioDesde.TabIndex = 11;
-            this.radioDesde.TabStop = true;
             this.radioDesde.Text = "Desde...";
             this.radioDesde.UseVisualStyleBackColor = true;
             // 
@@ -203,15 +205,15 @@
             this.comboPlantilla.Size = new System.Drawing.Size(142, 21);
             this.comboPlantilla.TabIndex = 10;
             // 
-            // cmdReporte
+            // cmdVista
             // 
-            this.cmdReporte.Location = new System.Drawing.Point(486, 3);
-            this.cmdReporte.Name = "cmdReporte";
-            this.cmdReporte.Size = new System.Drawing.Size(103, 23);
-            this.cmdReporte.TabIndex = 9;
-            this.cmdReporte.Text = "Generar reporte";
-            this.cmdReporte.UseVisualStyleBackColor = true;
-            this.cmdReporte.Click += new System.EventHandler(this.cmdReporte_Click);
+            this.cmdVista.Location = new System.Drawing.Point(486, 24);
+            this.cmdVista.Name = "cmdVista";
+            this.cmdVista.Size = new System.Drawing.Size(103, 23);
+            this.cmdVista.TabIndex = 9;
+            this.cmdVista.Text = "Generar vista";
+            this.cmdVista.UseVisualStyleBackColor = true;
+            this.cmdVista.Click += new System.EventHandler(this.cmdReporte_Click);
             // 
             // label1
             // 
@@ -407,6 +409,16 @@
             this.cerrarSesiónToolStripMenuItem1.Text = "Cerrar sesión...";
             this.cerrarSesiónToolStripMenuItem1.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem1_Click_1);
             // 
+            // cmdReporte
+            // 
+            this.cmdReporte.Location = new System.Drawing.Point(486, 53);
+            this.cmdReporte.Name = "cmdReporte";
+            this.cmdReporte.Size = new System.Drawing.Size(103, 23);
+            this.cmdReporte.TabIndex = 15;
+            this.cmdReporte.Text = "Generar reporte";
+            this.cmdReporte.UseVisualStyleBackColor = true;
+            this.cmdReporte.Click += new System.EventHandler(this.cmdReporte_Click_1);
+            // 
             // GenerarReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,7 +453,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button cmdReporte;
+        private System.Windows.Forms.Button cmdVista;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvVista;
         private System.Windows.Forms.Label label2;
@@ -471,5 +483,6 @@
         private System.Windows.Forms.ToolStripMenuItem manualDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem1;
+        private System.Windows.Forms.Button cmdReporte;
     }
 }
