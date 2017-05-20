@@ -66,6 +66,8 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
 
                 listaPlantilla = listaPlantilla.Where(funcSeleccionAno).ToList();
                 configurarDGVVistaP(listaPlantilla);
+
+                isPlantilla = true;
             }
             else if (comboPlantilla.SelectedIndex == 1)
             {
@@ -99,6 +101,8 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
 
                 listaPlantillaHistorial = listaPlantillaHistorial.Where(funcSeleccionAno).ToList();
                 configurarDGVVistaPH(listaPlantillaHistorial);
+
+                isPlantilla = false;
             }
         }
 

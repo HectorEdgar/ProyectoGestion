@@ -198,7 +198,7 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
                 listaPlantilla = listaPlantilla.Where(funcSeleccionAno).ToList();
                 configurarDGVVistaP(listaPlantilla);
 
-                isPlantilla = false;
+                isPlantilla = true;
             }
             else if (comboPlantilla.SelectedIndex == 1)
             {
