@@ -23,3 +23,28 @@ C:\Users\hetor\Documents\Visual Studio 2015\Projects\Escuela\IS6A\Gestion de pro
 C:\Users\hetor\Documents\Visual Studio 2015\Projects\Escuela\IS6A\Gestion de proyectos tecnologicos\ProyectoPlantillaPersonal\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Administrador.VistasReportes_Visor.resources
 C:\Users\hetor\Documents\Visual Studio 2015\Projects\Escuela\IS6A\Gestion de proyectos tecnologicos\ProyectoPlantillaPersonal\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Administrador.GestorCargarDatos2.resources
 C:\Users\hetor\Documents\Visual Studio 2015\Projects\Escuela\IS6A\Gestion de proyectos tecnologicos\ProyectoPlantillaPersonal\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Gestor.GestorCargarDatos.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\bin\Debug\ProyectoPlantillaPersonal.exe.config
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.csproj.ResolveComReference.cache
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.exe
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.pdb
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\bin\Debug\ProyectoPlantillaPersonal.exe
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\bin\Debug\ProyectoPlantillaPersonal.pdb
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\bin\Debug\EntityFramework.dll
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\bin\Debug\EntityFramework.xml
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.csprojResolveAssemblyReference.cache
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Administrador.AdministradorBuscar.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Administrador.GestorCargarDatos2.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Administrador.CuentaAgregar.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Administrador.GenerarReportes.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Administrador.VistasReportes.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Administrador.GenerarReportes_Gestor.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Gestor.BuscarGestor.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Gestor.GestorCargarDatos.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Administrador.VistasReportes_Gestor.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Loggin.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.MenuPrincipalAdministrador.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.MenuPrincipalGestor.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.MenuPrincipalVisor.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Formularios.Administrador.VistasReportes_Visor.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.Properties.Resources.resources
+C:\Users\habbo\Documents\GitHub\ProyectoGestion\ProyectoPlantillaPersonal\obj\Debug\ProyectoPlantillaPersonal.csproj.GenerateResource.Cache
