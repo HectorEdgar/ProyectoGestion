@@ -38,6 +38,7 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         {
             dgvVista.DataSource = listaPlantilla;
 
+            dgvVista.Columns["idPlantilla"].Visible = false;
             dgvVista.Columns["idClavePresupuestal"].Visible = false;
             dgvVista.Columns["idRelacionLaboral"].Visible = false;
             dgvVista.Columns["idSector"].Visible = false;
@@ -48,6 +49,7 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         {
             dgvVista.DataSource = listaPlantillaHistorial;
 
+            dgvVista.Columns["idPlantillaHistorial"].Visible = false;
             dgvVista.Columns["idClavePresupuestal"].Visible = false;
             dgvVista.Columns["idRelacionLaboral"].Visible = false;
             dgvVista.Columns["idSector"].Visible = false;
