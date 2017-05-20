@@ -1,7 +1,6 @@
-﻿using Microsoft.Office.Interop.Excel;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
+using Microsoft.Office.Interop.Excel;
 
 namespace ProyectoPlantillaPersonal.Controladores
 {
@@ -17,7 +16,7 @@ namespace ProyectoPlantillaPersonal.Controladores
         }
 
         public String ruta { get; set; }
-        public Microsoft.Office.Interop.Excel.Application application { get; set; }
+        public Application application { get; set; }
         public Workbooks workBooks { get; set; }
         public Workbook workBook { get; set; }
         public Worksheet workSheet { get; set; }
@@ -26,7 +25,7 @@ namespace ProyectoPlantillaPersonal.Controladores
         private void abrirExcel(String ruta, Boolean visible)
         {
             // Creamos un objeto Excel.
-            application = new Microsoft.Office.Interop.Excel.Application();
+            application = new Application();
             application.Visible = visible;
             workBooks = application.Workbooks;
             workBook = workBooks.Open(ruta);
@@ -75,12 +74,12 @@ namespace ProyectoPlantillaPersonal.Controladores
 
         public void cargarDatos(List<List<String>> listaDatos)
         {
-            Microsoft.Office.Interop.Excel.Application application = new Microsoft.Office.Interop.Excel.Application();
+            Application application = new Application();
             application.Visible = true;
             Workbook workBook = application.Workbooks.Add();
             Worksheet workSheet = workBook.Worksheets[1];
             Range range = workSheet.UsedRange;
-            MessageBox.Show(listaDatos.Count+"");
+            System.Windows.Forms.MessageBox.Show(listaDatos.Count+"");
             for (int i = 1; i <= listaDatos.Count; i++)
             {
                 for (int j = 1; j <= listaDatos[0].Count; j++)
@@ -89,6 +88,11 @@ namespace ProyectoPlantillaPersonal.Controladores
                     application.Cells[i, j] = listaDatos[i - 1][j - 1];
                 }
             }
+            application.Quit();
+            releaseObject(workBook);  
+            releaseObject(application);
+            releaseObject(range);
+            releaseObject(workSheet);
         }
 
         public void releaseObject(object obj)
