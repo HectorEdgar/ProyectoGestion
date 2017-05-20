@@ -285,6 +285,11 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
 
                 isPlantilla = false;
             }
+
+            if (listaPlantilla.Count > 0 || listaPlantillaHistorial.Count > 0)
+            {
+                cmdReporte.Enabled = true;
+            }
         }
 
         private void cmdReporte_Click_1(object sender, EventArgs e)
