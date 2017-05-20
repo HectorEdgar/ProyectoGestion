@@ -48,7 +48,7 @@ namespace ProyectoPlantillaPersonal.Formularios.Gestor
             cajaRELACION2.ReadOnly = true;
         }
 
-        public AdministradorBuscar()
+        public BuscarGestor()
         {
             ModeloClavePresupuestal m1 = new ModeloClavePresupuestal();
             ModeloRelacionLaboral m2 = new ModeloRelacionLaboral();
