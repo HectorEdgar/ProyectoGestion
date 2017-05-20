@@ -212,5 +212,77 @@ namespace ProyectoPlantillaPersonal.Formularios.Administrador
         {
             cerrarSesion();
         }
+
+        private void cmdVista_Click(object sender, EventArgs e)
+        {
+            List<Plantilla> listaPlantilla = new List<Plantilla>();
+            List<PlantillaHistorial> listaPlantillaHistorial = new List<PlantillaHistorial>();
+
+            if (comboPlantilla.SelectedIndex == 0)
+            {
+                listaPlantilla =
+                modeloPlantilla.seleccionarPorPropiedad(
+                    txtNup.Text, txtNup.Text != "" ? true : false,
+                    txtRfc.Text, txtRfc.Text != "" ? true : false,
+                    txtCp.Text, txtCp.Text != "" ? true : false
+                );
+
+                Func<Plantilla, bool> funcSeleccionAno = p => {
+                    if (radioDesde.Checked)
+                    {
+                        if (p.NMFING.Year >= nudAno.Value)
+                        {
+                            return true;
+                        }
+                    }
+
+                    if (radioHasta.Checked)
+                    {
+                        if (p.NMFING.Year <= nudAno.Value)
+                        {
+                            return true;
+                        }
+                    }
+
+                    return false;
+                };
+
+                listaPlantilla = listaPlantilla.Where(funcSeleccionAno).ToList();
+                configurarDGVVistaP(listaPlantilla);
+            }
+            else if (comboPlantilla.SelectedIndex == 1)
+            {
+                listaPlantillaHistorial =
+                modeloPlantillaHistorial.seleccionarPorPropiedad(
+                    txtNup.Text, txtNup.Text != "" ? true : false,
+                    txtNup.Text, txtNup.Text != "" ? true : false,
+                    txtRfc.Text, txtRfc.Text != "" ? true : false,
+                    txtCp.Text, txtCp.Text != "" ? true : false
+                );
+
+                Func<PlantillaHistorial, bool> funcSeleccionAno = ph => {
+                    if (radioDesde.Checked)
+                    {
+                        if (ph.NMFING.Year >= nudAno.Value)
+                        {
+                            return true;
+                        }
+                    }
+
+                    if (radioHasta.Checked)
+                    {
+                        if (ph.NMFING.Year <= nudAno.Value)
+                        {
+                            return true;
+                        }
+                    }
+
+                    return false;
+                };
+
+                listaPlantillaHistorial = listaPlantillaHistorial.Where(funcSeleccionAno).ToList();
+                configurarDGVVistaPH(listaPlantillaHistorial);
+            }
+        }
     }
 }
